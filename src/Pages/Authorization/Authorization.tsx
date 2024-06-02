@@ -68,9 +68,10 @@ const Authorization: FC<OpenAvatarProps> = ({ modalActive, setModalActive }) => 
                 <div className={s.PrivacyPolicy_card} onClick={(e) => e.stopPropagation()}>
                     <span onClick={() => setModalActive(false)} className={s.closed}>&#10006;</span>
                     <form className={s.formCard} onSubmit={handleSubmit}>
-                        <input onChange={(e) => getUserData('username', e.target.value)} value={userData.username} type="text" />
+                        <h2 >Вход</h2>
+                        <input placeholder='Логин' onChange={(e) => getUserData('username', e.target.value)} value={userData.username} type="text" />
                         <label>
-                            <input onChange={(e) => getUserData('password', e.target.value)} value={userData.password} type={changeInput ? "text" : "password"} />
+                            <input placeholder='Пароль' onChange={(e) => getUserData('password', e.target.value)} value={userData.password} type={changeInput ? "text" : "password"} />
                             <span onClick={() => setChangeInput(!changeInput)}>ok</span>
                         </label>
                         <button>Войти</button>

@@ -7,7 +7,7 @@
 }
 
 .detailviewCard {
-    height: 811px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,14 +25,34 @@
         img {
             width: 300px;
             border-radius: 20px;
+
+            @media(max-width:500px) {
+                width: 150px;
+            }
         }
+
 
         h2 {
             color: #ffcf40;
             font-size: 20px;
             font-family: 'Courier New', Courier, monospace;
             padding-top: 30px;
+
+            @media(max-width:500px) {
+                font-size: 12px;
+
+            }
         }
+
+        .padding {
+            padding-bottom: 220px;
+
+            @media(max-width:500px) {
+                padding-bottom: 20px;
+
+            }
+        }
+
 
         span {
             color: #ffcf40;
@@ -40,6 +60,7 @@
             font-family: 'Courier New', Courier, monospace;
             padding-top: 30px;
             cursor: pointer;
+
         }
 
 

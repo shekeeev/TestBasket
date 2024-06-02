@@ -28,7 +28,7 @@ const DetailView: FC = () => {
                     <img src={card?.image} alt="" />
                     <h2>{card?.title}</h2>
                     <h2>{card?.description}</h2>
-                    <h2>Цсена: {card?.price} $</h2>
+                    <h2 className={s.padding}>Цена: {card?.price} $</h2>
 
                 </div>
             </div>

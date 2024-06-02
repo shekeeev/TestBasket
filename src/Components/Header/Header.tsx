@@ -6,6 +6,7 @@ import logo from '../../Assets/Images/jum.jpg'
 import { FaShoppingBasket } from 'react-icons/fa';
 import { removeCookiesToken } from '../Cookies';
 import Basket from '../../Pages/Basket/Basket';
+import { Link } from 'react-router-dom';
 const Header: FC = () => {
     const [modalActive, setModalActive] = useState(false)
     const [basket, setBasket] = useState(false)
@@ -20,7 +21,9 @@ const Header: FC = () => {
         <>
             <header className={s.header}>
                 <div className={s.headerDiv}>
-                    <img src={logo} alt="logo" />
+                    <Link to={'/'}>
+                        <img src={logo} alt="logo" />
+                    </Link>
                     <div className={s.twoButton}>
                         {!token ?
                             <button className={s.btn} onClick={() => setModalActive(!modalActive)}><span>Войти</span></button>
