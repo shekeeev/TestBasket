@@ -1,0 +1,47 @@
+.arrow {
+    width: 90%;
+    font-size: 30px;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.detailviewCard {
+    height: 811px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .card {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 300px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            color: #ffcf40;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 30px;
+        }
+
+        span {
+            color: #ffcf40;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 30px;
+            cursor: pointer;
+        }
+
+
+    }
+}
