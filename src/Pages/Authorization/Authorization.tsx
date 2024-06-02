@@ -3,6 +3,7 @@ import s from './Authorization.module.scss';
 import { UserModules } from '../../Store/Modules';
 import { useAppDispatch, useAppSelector } from '../../Store/Hooks/hooks';
 import { fetchByUserData, fetchByUserToken } from '../../Store/Slice/cardSlice';
+import { FaEye } from 'react-icons/fa';
 interface OpenAvatarProps {
     setModalActive: (e: boolean) => void
     modalActive: boolean
@@ -72,7 +73,7 @@ const Authorization: FC<OpenAvatarProps> = ({ modalActive, setModalActive }) => 
                         <input placeholder='Логин' onChange={(e) => getUserData('username', e.target.value)} value={userData.username} type="text" />
                         <label>
                             <input placeholder='Пароль' onChange={(e) => getUserData('password', e.target.value)} value={userData.password} type={changeInput ? "text" : "password"} />
-                            <span onClick={() => setChangeInput(!changeInput)}>ok</span>
+                            <span onClick={() => setChangeInput(!changeInput)}><FaEye /></span>
                         </label>
                         <button>Войти</button>
                     </form>
